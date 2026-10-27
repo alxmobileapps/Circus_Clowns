@@ -1,8 +1,8 @@
 /* =====================================================================
- * ADMOB SETTINGS  (Circus Clown)
+ * ADMOB SETTINGS  (Circus Clowns)
  * =====================================================================
  * !! These are Google's SAMPLE ids (they only ever show test ads).
- * !! Before the Play Store release, create a "Circus Clown" app + banner
+ * !! Before the Play Store release, create a "Circus Clowns" app + banner
  * !! ad unit in AdMob and paste the real ids here.
  *
  * appId     AdMob App ID (copied into the Android manifest by the build)

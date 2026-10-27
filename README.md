@@ -1,4 +1,4 @@
-# Circus Clown 🤡🎪
+# Circus Clowns 🤡🎪
 
 A one-tap circus game, sister game of Circus Dogs. The clown starts standing on a circus ball, and more
 balls of different sizes roll in, each at its own speed. **Quick tap = small hop, hold longer = higher jump.**
@@ -44,7 +44,7 @@ Every clown uses the same hitbox size, so no clown is easier than another.
 ## Ads (AdMob)
 
 Settings are in **`www/ads-config.js`**. ⚠️ It currently holds **Google's sample ids** (test ads only).
-Create a *Circus Clown* app and a banner ad unit in AdMob and paste the real ids there before the
+Create a *Circus Clowns* app and a banner ad unit in AdMob and paste the real ids there before the
 Play Store release. The **debug APK always shows Google test ads**; the **release AAB/APK uses the ids in the file**.
 
 ## How the Android app is built
@@ -77,4 +77,4 @@ App ID: `com.alxmobileapps.circusclown`
 ## Before publishing
 
 - Real AdMob ids in `www/ads-config.js`
-- A Circus Clown privacy policy page, then set `PRIVACY_URL` in `www/game.js`
+- A Circus Clowns privacy policy page, then set `PRIVACY_URL` in `www/game.js`

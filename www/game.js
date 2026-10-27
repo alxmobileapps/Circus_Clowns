@@ -1,4 +1,4 @@
-/* Circus Clown — a one-tap circus ball-hopping game.
+/* Circus Clowns — a one-tap circus ball-hopping game.
  * The clown starts standing on a circus ball. More balls of different sizes and speeds roll in.
  * Quick tap = small hop, hold = big jump. Jump onto the coming ball before it bumps the one
  * you are standing on. From 4 points hanging rings of fire swing in (jump through them),
@@ -1542,12 +1542,12 @@
 
   // ---------- Share score ----------
   const STORE_URL = 'https://play.google.com/store/apps/details?id=com.alxmobileapps.circusclown';
-  const PRIVACY_URL = 'https://claude.ai/artifact/4KKc3PkM1bFsYP9b9wp3js';   // Circus Clown privacy policy
+  const PRIVACY_URL = 'https://claude.ai/artifact/4KKc3PkM1bFsYP9b9wp3js';   // Circus Clowns privacy policy
   function shareText() {
     const mon = curClown().name;
-    if (score <= 0) return '🤡🎪 I just played Circus Clown! Can you hop across the circus balls?';
-    if (newBest) return '🏆 NEW HIGH SCORE! I scored ' + score + ' in Circus Clown with ' + mon + ' 🤡🎪 Can you beat me?';
-    return '🤡🎪 I scored ' + score + ' in Circus Clown with ' + mon + '! Can you beat my score?';
+    if (score <= 0) return '🤡🎪 I just played Circus Clowns! Can you hop across the circus balls?';
+    if (newBest) return '🏆 NEW HIGH SCORE! I scored ' + score + ' in Circus Clowns with ' + mon + ' 🤡🎪 Can you beat me?';
+    return '🤡🎪 I scored ' + score + ' in Circus Clowns with ' + mon + '! Can you beat my score?';
   }
   const CapNative = () => !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
   function capPlugin(name) {
@@ -1593,7 +1593,7 @@
       const g = ctx.createLinearGradient(0, 0, 0, S); g.addColorStop(0, 'rgba(60,20,110,0.5)'); g.addColorStop(0.5, 'rgba(60,20,110,0.08)'); g.addColorStop(1, 'rgba(60,20,110,0.45)');
       ctx.fillStyle = g; ctx.fillRect(0, 0, S, S);
       ctx.fillStyle = '#c98f4c'; ctx.fillRect(0, 820, S, 260);
-      text('CIRCUS CLOWN', S / 2, 100, 104, '#ffd23a');
+      text('CIRCUS CLOWNS', S / 2, 100, 92, '#ffd23a');
       text(newBest ? 'NEW HIGH SCORE!' : 'I scored', S / 2, 200, 58, newBest ? '#ffe38a' : '#fff');
       text(String(score), S / 2, 312, 150, '#fff');
       ctx.save(); ctx.translate(S / 2, 820); ctx.scale(2.6, 2.6);
@@ -1648,8 +1648,8 @@
       // spiky ball rolling in
       ctx.save(); ctx.translate(948, fy - 1.4 * GY); ctx.scale(1.4, 1.4);
       drawBall({ x: 0, r: 34, rot: 0.4, hop: null, ph: 0, spiky: true, st: 'come' }); ctx.restore();
-      text('CIRCUS', 250, 165, 118, '#fff');
-      text('CLOWN', 250, 290, 118, '#ffd23a');
+      text('CIRCUS', 238, 175, 98, '#fff');
+      text('CLOWNS', 238, 285, 98, '#ffd23a');
     } finally { ctx = saved; }
     return off.toDataURL('image/png');
   }
@@ -1663,13 +1663,13 @@
           const w = await FS.writeFile({ path: 'circus-clown-score.png', data: shareImage().split(',')[1], directory: 'CACHE' });
           files = [w.uri];
         } catch (e) { files = undefined; }
-        await Share.share({ title: 'Circus Clown', text: text + ' ' + STORE_URL, files, dialogTitle: 'Share your score' });
+        await Share.share({ title: 'Circus Clowns', text: text + ' ' + STORE_URL, files, dialogTitle: 'Share your score' });
         return;
       } catch (e) {
-        try { await Share.share({ title: 'Circus Clown', text: text + ' ' + STORE_URL, dialogTitle: 'Share your score' }); return; } catch (e2) { /* fall through */ }
+        try { await Share.share({ title: 'Circus Clowns', text: text + ' ' + STORE_URL, dialogTitle: 'Share your score' }); return; } catch (e2) { /* fall through */ }
       }
     }
-    if (navigator.share) { try { await navigator.share({ title: 'Circus Clown', text, url: STORE_URL }); return; } catch (e) { /* cancelled */ } }
+    if (navigator.share) { try { await navigator.share({ title: 'Circus Clowns', text, url: STORE_URL }); return; } catch (e) { /* cancelled */ } }
     try { await navigator.clipboard.writeText(text + ' ' + STORE_URL); flashOver('Copied! Paste it anywhere.'); } catch (e) { flashOver('Sharing is not available here'); }
   }
   const IS_IOS = !!(window.Capacitor && window.Capacitor.getPlatform && window.Capacitor.getPlatform() === 'ios');
@@ -1843,7 +1843,7 @@
       const pulse = 1 + Math.sin(time * 3) * 0.04;
       ctx.save(); ctx.translate(viewW / 2, ty); ctx.scale(pulse, pulse);
       text('CIRCUS', 0, -36, 76, '#fff');
-      text('CLOWN', 0, 38, 76, '#ffd23a');
+      text('CLOWNS', 0, 38, 76, '#ffd23a');
       ctx.restore();
       text('Quick tap = small hop.', viewW / 2, ty + 110, 22, '#ffe9c7');
       text('Hold = big jump.', viewW / 2, ty + 140, 22, '#ffe9c7');

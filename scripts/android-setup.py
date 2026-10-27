@@ -119,7 +119,7 @@ public class AppSharePlugin extends Plugin {
             Context ctx = getContext();
             try {
                 ClipboardManager cm = (ClipboardManager) ctx.getSystemService(Context.CLIPBOARD_SERVICE);
-                cm.setPrimaryClip(ClipData.newPlainText("Circus Clown", text));
+                cm.setPrimaryClip(ClipData.newPlainText("Circus Clowns", text));
             } catch (Exception e) { }
             Uri uri = null;
             if (path != null) {
@@ -169,7 +169,7 @@ public class AppSharePlugin extends Plugin {
             // Facebook, Instagram and TikTok ignore pre-written text, so also copy it for pasting
             try {
                 ClipboardManager cm = (ClipboardManager) ctx.getSystemService(Context.CLIPBOARD_SERVICE);
-                cm.setPrimaryClip(ClipData.newPlainText("Circus Clown", text));
+                cm.setPrimaryClip(ClipData.newPlainText("Circus Clowns", text));
             } catch (Exception e) { }
             Uri uri = null;
             if (path != null) {
