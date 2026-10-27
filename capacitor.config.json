@@ -1,0 +1,8 @@
+{
+  "appId": "com.alxmobileapps.circusclown",
+  "appName": "Circus Clown",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#1c0a33"
+  }
+}
